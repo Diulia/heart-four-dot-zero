@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+
+:root {
+  --salmon: #ff8080;
+  --pink-lighter: #f8bbd0;
+  --pink: #ffcccc;
+  --white-pink: #ffe6e6;
+  --pink-mid: #f48fb1;
+  --pink-darker:#f06292;
+  --red: #ff0000;
+  --fucsia:#d81b60;
+  --fucsia-lighter:#ec407a;
+  --black: #000;
+  --yellow: rgb(248, 175, 6);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  font-family: monospace;
+  font-size: 16px;
+  background-color: var(--pink-lighter);
+}
+
+#main {
+  display: flex;
+  flex: 1;
+}
+#main > article {
+  flex: 1;
+}
+#main > nav, 
+#main > aside {
+  flex: 0 0 20vw;
+  background: var(--salmon);
+  flex: 1;
+  background: url("https://cdn-icons-png.flaticon.com/512/1202/1202954.png?w=740&t=st=1654189636~exp=1654190236~hmac=7b59b144dbbe7df805fb3545d99fd83be7e845e366f2bb820b41b13d9818f7f2") repeat;
+  background-size: cover;
+  background-size: 20%;
+}
+#main > nav {
+  order: -1;
+}
+header, footer {
+  background: var(--fucsia-lighter);
+  height: 20vh;
+}
+header, footer, article, nav, aside {
+  padding: 1em;
+}

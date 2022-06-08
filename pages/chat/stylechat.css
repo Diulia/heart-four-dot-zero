@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+
+:root {
+  --salmon: #ff8080;
+  --pink-lighter: #f8bbd0;
+  --pink: #ffcccc;
+  --white-pink: #ffe6e6;
+  --pink-mid: #f48fb1;
+  --pink-darker:#f06292;
+  --red: #ff0000;
+  --fucsia:#d81b60;
+  --fucsia-lighter:#ec407a;
+  --black: #000;
+  --yellow: rgb(248, 175, 6);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  font-family: monospace;
+  font-size: 16px;
+  background-color: var(--pink-lighter);
+}
+
+#main {
+  display: flex;
+  flex: 1;
+}
+#main > article {
+  flex: 1;
+  order: 1;
+}
+#main > nav, 
+#main > aside {
+  flex: 0 0 20vw;
+}
+#main > nav {
+  background: var(--fucsia);
+  order: 3;
+}
+#main > aside {
+  background: var(--pink);
+  order: 2;
+}
+header, footer {
+  background: var(--pink-darker);
+  height: 20vh;
+}
+header, footer, article, nav, aside {
+  padding: 1em;
+}

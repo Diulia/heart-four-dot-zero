@@ -8,5 +8,5 @@ $('.slider').slick({
 
 
 function clickButton(){
-  alert("pensar no que vou colocar aqui")
+  alert("você clicou na mensagem")
 }

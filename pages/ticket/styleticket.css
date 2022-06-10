@@ -65,6 +65,7 @@ header, footer, article, nav, aside {
 }
 
 .gifheader{
+  position: relative;
   width: 250px;
   height: 130px;
 }

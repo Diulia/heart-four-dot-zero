@@ -8,9 +8,8 @@
     <title>calendar</title>
 </head>
 <body>
-    <nav class="col-1">Navegação</nav>
+    <nav class="col-1"></nav>
     <div class="col-2">
-        <header>Cabeçalho</header>
       <main class="content">
       <article onload="startTime()">
         <div class="container">
@@ -50,7 +49,7 @@
                       <th>14</th>
                       <th>15</th>
                       <th>16</th>
-                      <th>17</th>
+                      <th>17<span class="active" style="background-color: darkmagenta;"></span></th>
                       <th>18</th>
                       <th>19</th>
                       <th>20</th>
@@ -86,8 +85,8 @@
               </div>
             </div>
             <div class="back">
-              <div class="contentback">
-                <div class="backcontainer">
+              <div class="contentback" id="back">
+                <div class="backcontainer" id="backText">
                 </div>
               </div>
             </div>
@@ -145,8 +144,8 @@
           
         </ul>  -->
       </article>
+      <aside>teste</aside>
       </main>
-        <footer>Rodapé</footer>
     </div>
     <script src="calendar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

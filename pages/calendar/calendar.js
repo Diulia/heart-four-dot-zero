@@ -2,9 +2,23 @@ let cardElement = document.querySelector(".card");
 
 cardElement.addEventListener("click", flip);
 
+const message = 
+    {
+        text: "O dia que eu tomei a melhor decisão: a de ficar e encontrar você"
+    }
+
+
+let back = document.getElementById('back')
+let backText = document.getElementById('backText')
+
 function flip() {
     cardElement.classList.toggle("flipped")
+        back.style.transition = '0.4s'
+        backText.innerHTML = message.text
+        backText.style.color = '#000000'
 }
+
+
 
 function startTime() {
     var weekday = new Array();
@@ -33,7 +47,7 @@ function startTime() {
     var m = today.getMinutes();
     var s = today.getSeconds();
     var d = today.getDate();
-    var y = today.getFullYear();
+    var y = 2016;
     var wd = weekday[today.getDay()];
     var mt = month[today.getMonth()];
 

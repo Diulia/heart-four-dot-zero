@@ -57,6 +57,11 @@ header, footer, article, nav, aside {
   padding: 1em;
 }
 
+p {
+  color: var(--fucsia);
+  font-size: 30px;
+  text-align: center;
+}
 
 
 aside{

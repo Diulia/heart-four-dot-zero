@@ -218,7 +218,7 @@ const presentes = [
             {
                 id: "cama",
                 canMix: true,
-                message: "Você ganhou uma sonequinha"
+                message: "Você ganhou a possibilidade de assistir bobs burgers comigo"
             },
             {
                 id: "serie",
@@ -236,17 +236,16 @@ var cartaDois = null;
 
 
 function flipCard() {
+    //não mexer aqui por enquanto
     if (cartaUm == null) {
         this.classList.toggle('flip');
         cartaUm = this
-        console.log('mostra o id: ', cartaUm.id, this.getAttribute('id'))
 
     } else {
         if (cartaUm.getAttribute('id') === this.getAttribute('id')) {
-            resultado.style.backgroundColor = '#ffff66';
-            resultado.style.color = '#000000'
-            resultado.innerHTML = "Gerando presente aguarde"
-            console.log("mostra o id das cartas: ", cartaUm.id, this.getAttribute('id'))
+            resultado.innerHTML = "Você ganhou alguma coisa"
+            resultado.style.backgroundColor = '#ec407a';
+            resultado.style.color = '#fff'
         }
         if (cartaUm.getAttribute('id') !== this.getAttribute('id')) {
             resultado.innerHTML = "Você não ganhou nada"
@@ -256,10 +255,50 @@ function flipCard() {
         }
         this.classList.toggle('flip')
         cartaDois = this
-        console.log(cartaUm.id, cartaDois.id)
+
+        //não mexer aqui
+
+
+        if (cartaUm !== null && cartaDois !== null) {
+            let cardUmData = cartaUm.querySelector('.front-face').getAttribute('datacard')
+            let cardDoisData = cartaDois.querySelector('.front-face').getAttribute('datacard')
+
+            const selectGift = presentes.find((presente) => {
+                console.log(cardUmData, cartaUm)
+                return presente.id === cardUmData
+            })
+
+            const getGift = selectGift.mixWith.find((presente) => {
+                return presente.id === cardDoisData
+            })
+
+            if (cardUmData === cardDoisData) {
+                if(getGift.canMix === true){
+                   console.log(cardUmData, cardDoisData)
+                resultado.innerHTML = getGift.message
+                resultado.style.backgroundColor = "#79ff4d" 
+                }
+            } 
+
+            if (cardUmData !== cardDoisData){
+                if (getGift.canMix === true){
+                    console.log(cardUmData, cardDoisData)
+                    resultado.innerHTML = getGift.message
+                    resultado.style.backgroundColor = "#79ff4d"
+                } else{
+                    resultado.innerHTML = getGift.message
+                }
+            }
+              cartaUm = null
+              cartaDois = null
+
+        }
+
     }
 
 }
+
+
 
 
 // function getGiftsCard() {

@@ -57,6 +57,12 @@ header, footer, article, nav, aside {
   padding: 1em;
 }
 
+
+
+aside{
+  font-size: 50px;
+}
+
 .memory-game {
   width: 640px;
   height: 640px;

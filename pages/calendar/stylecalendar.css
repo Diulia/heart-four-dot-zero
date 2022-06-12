@@ -147,7 +147,8 @@ body {font-family: Verdana, sans-serif;}
   -webkit-transform-style:preserve-3d;
   transition:transform 1s ease;
   cursor:pointer;
-  color: var(--white-pink);
+  color: var(--fucsia);
+  text-decoration: underline;
   text-align: center;
   margin: auto;
 }
@@ -211,7 +212,7 @@ body {font-family: Verdana, sans-serif;}
   /* float:left;
   margin-left:30px;
   margin-top:20px; */
- 
+  text-align: center;
   background-color: var(--pink-mid);
   border-radius:6px;
   padding:10px 30px;

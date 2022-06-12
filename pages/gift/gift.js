@@ -185,7 +185,7 @@ const presentes = [
             {
                 id: "serie",
                 canMix: true,
-                message: "Você ganhou a possibilidade de assistir bobs burgers comigo"
+                message: "Você ganhou a possibilidade de deitar pra assistir bobs burgers comigo mas pegar no sono nos primeiros 10 minutos"
             }
         ]
     },
@@ -218,12 +218,12 @@ const presentes = [
             {
                 id: "cama",
                 canMix: true,
-                message: "Você ganhou a possibilidade de assistir bobs burgers comigo"
+                message: "Você ganhou a possibilidade de deitar pra assistir bobs burgers comigo mas pegar no sono nos primeiros 10 minutos"
             },
             {
                 id: "serie",
                 canMix: true,
-                message: "Você ganhou a possibilidade de assistir bobs burgers comigo"
+                message: "Você ganhou a possibilidade de assistir bobs burgers ou two and a half man comigo"
             }
         ]
     }
@@ -301,32 +301,7 @@ function flipCard() {
 
 
 
-// function getGiftsCard() {
-//     const idPresente = flipCard.cartaUm
-//     const idPresente2 = flipCard.cartaDois
 
-//     const selectGift = presentes.find((presente) => {
-//         return presente.id === parseInt(idPresente.id)
-//     })
-
-//     const getGift = selectGift.mixWith.find((presente) => {
-//         return presente.id === parseInt(idPresente2.id)
-//     })
-
-//     if (getGift.canMix === true) {
-//         resultado.innerHTML = getGift.message
-//     } else {
-//         resultado.innerHTML = getGift.message
-//     }
-//     if (cartaUm.getAttribute('id') !== cartaDois.getAttribute('id')) {
-//         resultado.innerHTML = getGift.message
-//     }
-
-//     if (cartaUm.getAttribute('id') === this.getAttribute('id')) {
-//         console.log("mostra o id das cartas: ", cartaUm.id, this.getAttribute('id'))
-//         resultado.innerHTML = getGift.message
-//     }
-// }
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 function shuffleCard() {

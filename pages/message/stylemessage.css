@@ -54,4 +54,5 @@ header, footer {
 }
 header, footer, article, nav, aside {
   padding: 1em;
+  text-align: justify;
 }
